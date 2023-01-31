@@ -6,7 +6,7 @@ replicaCount: 3
 
 image:
   repository: levvv/java-maven-app
-  pullPolicy: Never
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: 1.3.33
 
@@ -37,7 +37,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: LoadBalancer
+  type: NodePort
   port: 8080
   newport: 8089
 
